@@ -26,3 +26,6 @@ it .env)
 * Port to Python 3.
 * Add Facebook Support
 * Add support of mailing lists.
+* Probably add Unicode support.
+* Write a basic CLI
+* Maybe make it a web service.
