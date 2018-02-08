@@ -17,11 +17,16 @@ class AnnounceBot:
     # Sends the message to everyone on the list.
     def send_message(self, mailing_list, message):
         if mailing_list in self._lists:
-            # Connect to accounts and send it out!
-            pass
+            for account in self._lists[mailing_list]:
+                account_details = self._accounts[account]
+                if account_details['type'] == "slack":
+                    slack_acc = service.slack.SlackAnnounce(account_details['key'])
+                    for channel in self._lists[mailing_list][account]:
+                        slack_acc.send_message(channel, message)
 
 if __name__ == "__main__":
     #slack_vt =  os.environ['SLACK_OAUTH_TOKEN']
     #slack_bot = service.slack.SlackAnnounce(slack_vt)
     #print slack_bot.post_message("#tests", "Ahoy There!")
     bot = AnnounceBot('examples/example.toml')
+    bot.send_message("main","Don't mind me, bear is just testing a script.")

@@ -7,7 +7,7 @@ class SlackAnnounce:
         self.verification_token = verification_token
         pass
     # Send the message to the Slack Workspace.
-    def post_message(self, channel, message):
+    def send_message(self, channel, message):
         data = {
             "text": message,
             "channel": channel

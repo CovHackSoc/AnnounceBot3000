@@ -3,5 +3,5 @@ type = "slack"
 key = "env:SLACK_OAUTH_TOKEN"
 
 [lists.main]
-mainslack = ["tests","feeds"]
+mainslack = ["general","tests"]
 

@@ -13,12 +13,11 @@ class AnnounceConfiguration:
             obj = toml.load(config)
             self._config = obj
             self._recursive_obj_search(self._config)
-        print self._config
+        #print self._config
     # Used to replace strings that start with "env:" with whatever that environ
     # variable resolves to.
     @staticmethod
     def _attempt_patch_str(in_dict, key):
-        print in_dict
         if in_dict[key][0:4] == "env:":
             in_dict[key] = os.environ[in_dict[key][4::]]
 
@@ -58,4 +57,4 @@ class AnnounceConfiguration:
 
 if __name__ == "__main__":
     config = AnnounceConfiguration("examples/example.toml")
-    print config._config
+    print(config._config)
