@@ -20,3 +20,9 @@ How to set up all the different services supported.
 Register a new app and give it permissions to send messages. Then place its
 OAUTH key under the environment variable `SLACK_OAUTH_TOKEN` (You can also place
 it .env)
+
+## Todo
+
+* Port to Python 3.
+* Add Facebook Support
+* Add support of mailing lists.
