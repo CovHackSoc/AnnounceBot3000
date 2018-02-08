@@ -17,7 +17,7 @@ class SlackAnnounce:
         }
         r = requests.post("{}/chat.postMessage".format(self.base),
                           data=data, headers=headers)
-        return r.text
+        return r.json()['ok']
 
 if __name__ == "__main__":
     #testing
