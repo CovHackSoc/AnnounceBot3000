@@ -3,7 +3,7 @@ Automating our announcements to our Slack/Facebook {Page,Group,Chat}/Email list.
 
 ## Setting Up
 
-Run `virutalenv .` and `pip install -r requirements.txt`
+Run `virtualenv .` and `pip install -r requirements.txt`
 
 To get the tool chain setup.
 
@@ -19,7 +19,7 @@ How to set up all the different services supported.
 
 Register a new app and give it permissions to send messages. Then place its
 OAUTH key under the environment variable `SLACK_OAUTH_TOKEN` (You can also place
-it .env)
+it in `.env`)
 
 ## Todo
 
